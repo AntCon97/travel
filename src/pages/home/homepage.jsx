@@ -1,10 +1,11 @@
 import React from 'react';
+import Slideshow from './../../component/slideshow/slideshow';
 
 const HomePage = () => (
   <div>
-    <div>
-      <span>Homepage</span>
-    </div>
+    <Slideshow />
+
+    <span>Homepage</span>
   </div>
 );
 

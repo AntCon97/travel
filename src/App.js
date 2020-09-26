@@ -6,7 +6,6 @@ import contact from './pages/contact/contact.jsx';
 import about from './pages/about/about.jsx';
 import HomePage from './pages/home/homepage.jsx';
 import Header from './component/header/header.jsx';
-import './App.css';
 
 function App() {
   return (
