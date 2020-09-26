@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slide } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import './slideshow.styles.scss';
 import pic1 from './../../assets/banner-1.jpg';
@@ -9,21 +9,21 @@ import pic3 from './../../assets/banner-3.jpg';
 const Slideshow = () => {
   return (
     <div>
-      <Slide easing='ease'>
+      <Fade>
         <div className='each-slide'>
           <img src={pic1} alt='pic1' />
-          <div className='imgcent'>FIND THE BEST PLACE THIS HOLIDAYS</div>
+          <div className='imgcent1'>FIND THE BEST PLACE FOR YOUR HOLIDAYS</div>
         </div>
         <div className='each-slide'>
-          <img src={pic2} alt='pic1' />
+          <img src={pic2} alt='pic2' />
 
-          <span>Slide 2</span>
+          <div className='imgcent2'>TRAVEL ALL OVER THE WORLD TODAY</div>
         </div>
         <div className='each-slide'>
           <img src={pic3} alt='pic3' />
-          <span>Slide 3</span>
+          <div className='imgcent3'>WIDEN YOUR HORIZONS NOW</div>
         </div>
-      </Slide>
+      </Fade>
     </div>
   );
 };
