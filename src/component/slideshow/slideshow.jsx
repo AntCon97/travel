@@ -8,7 +8,7 @@ import pic3 from './../../assets/banner-3.jpg';
 
 const Slideshow = () => {
   return (
-    <div>
+    <div className='under'>
       <Fade>
         <div className='each-slide'>
           <img src={pic1} alt='pic1' />
