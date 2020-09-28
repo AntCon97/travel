@@ -3,15 +3,24 @@
   padding-bottom: 35px;
   background-color: rgb(218, 85, 85);
 }
+.card1:hover {
+  cursor: pointer;
+}
 .card2 {
   display: inline-block;
   padding-bottom: 35px;
   background-color: rgb(98, 187, 98);
 }
+.card2:hover {
+  cursor: pointer;
+}
 .card3 {
   display: inline-block;
   padding-bottom: 35px;
-  background-color: rgb(214, 214, 81);
+  background-color: rgb(182, 182, 69);
+}
+.card3:hover {
+  cursor: pointer;
 }
 
 .container {
@@ -21,7 +30,7 @@
 .over {
   float: left;
 
-  margin-top: -15px;
+  margin-top: -80px;
 }
 
 .pic {
@@ -31,10 +40,84 @@
 
 .cc1 {
   display: inline;
+
   padding-left: 250px;
   padding-bottom: 150px;
+  padding-right: 100px;
+}
+.cc2 {
+  display: inline;
+  padding-right: 100px;
 }
 
 .second {
   background-color: rgb(185, 185, 185);
+}
+
+.tc {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.cct1 {
+  padding-right: 55px;
+  color: white;
+}
+
+.cct2 {
+  padding-left: 55px;
+  color: white;
+}
+
+.bc1 {
+  display: inline;
+  padding-left: 250px;
+  padding-bottom: 150px;
+  padding-right: 100px;
+}
+
+.ctitle {
+  box-sizing: border-box;
+  width: 350px;
+  color: rgb(218, 85, 85);
+  background-color: white;
+}
+
+.bcontainer {
+  position: relative;
+  display: inline-block;
+}
+.button {
+  padding: 0;
+  width: 50px;
+  border: 0;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: 0;
+  font-size: 40px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 8px 12px;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+  cursor: pointer;
 }

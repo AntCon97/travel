@@ -5,11 +5,16 @@ import './slideshow.styles.scss';
 import pic1 from './../../assets/banner-1.jpg';
 import pic2 from './../../assets/banner-2.jpg';
 import pic3 from './../../assets/banner-3.jpg';
+const properties = {
+  duration: 5000,
+  infinite: true,
+  arrows: false,
+};
 
 const Slideshow = () => {
   return (
     <div className='under'>
-      <Fade>
+      <Fade {...properties}>
         <div className='each-slide'>
           <img src={pic1} alt='pic1' />
           <div className='imgcent1'>FIND THE BEST PLACE FOR YOUR HOLIDAYS</div>
