@@ -15,43 +15,8 @@ class HomePage extends React.Component {
       card1: false,
       card2: false,
       card3: false,
-      open1: false,
-      open2: false,
+      open: false,
       htitle: '-- Select Hotel --',
-      gtitle: '-- Guests --',
-
-      guests: [
-        {
-          id: 0,
-          title: '1',
-          selected: false,
-          key: 'guests',
-        },
-        {
-          id: 1,
-          title: '2',
-          selected: false,
-          key: 'guests',
-        },
-        {
-          id: 2,
-          title: '3',
-          selected: false,
-          key: 'guests',
-        },
-        {
-          id: 3,
-          title: '4',
-          selected: false,
-          key: 'guests',
-        },
-        {
-          id: 4,
-          title: '5+',
-          selected: false,
-          key: 'guests',
-        },
-      ],
       hotels: [
         {
           id: 0,
@@ -98,8 +63,7 @@ class HomePage extends React.Component {
       !this.container.current.contains(event.target)
     ) {
       this.setState({
-        open1: false,
-        open2: false,
+        open: false,
       });
     }
   };
@@ -145,11 +109,6 @@ class HomePage extends React.Component {
         {hl.title}
       </li>
     ));
-    const glistItems = this.state.guests.map((gl) => (
-      <li key={gl.id} onClick={(e) => this.handleHClick(e, gl.title)}>
-        {gl.title}
-      </li>
-    ));
 
     let c1, c2, c3;
     if (travel1 === true) {
@@ -186,6 +145,16 @@ class HomePage extends React.Component {
                 placeholderText='Check-out Date'
                 className='cal'
               />
+              <div>
+                <form>
+                  <input
+                    type='text'
+                    name='name'
+                    className='cform'
+                    placeholder='How many guests?'
+                  />
+                </form>
+              </div>
             </div>
             <div className='container'>
               <div className='tc'>
