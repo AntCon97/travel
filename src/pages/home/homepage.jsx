@@ -1,5 +1,7 @@
 import React from 'react';
 import Slideshow from './../../component/slideshow/slideshow';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './home.styles.scss';
 import pic1 from './../../assets/tours-02.jpg';
 import pic2 from './../../assets/tours-01.jpg';
@@ -13,9 +15,11 @@ class HomePage extends React.Component {
       card1: false,
       card2: false,
       card3: false,
-      open: false,
+      open1: false,
+      open2: false,
       htitle: '-- Select Hotel --',
       gtitle: '-- Guests --',
+
       guests: [
         {
           id: 0,
@@ -74,6 +78,8 @@ class HomePage extends React.Component {
           key: 'hotel',
         },
       ],
+      startDate: '',
+      endDate: '',
     };
     this.handleClick1 = this.handleClick1.bind(this);
     this.handleClick2 = this.handleClick2.bind(this);
@@ -85,16 +91,19 @@ class HomePage extends React.Component {
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
+
   handleClickOutside = (event) => {
     if (
       this.container.current &&
       !this.container.current.contains(event.target)
     ) {
       this.setState({
-        open: false,
+        open1: false,
+        open2: false,
       });
     }
   };
+
   handleButtonClick = () => {
     this.setState((state) => {
       return {
@@ -115,10 +124,32 @@ class HomePage extends React.Component {
     this.setState({ card3: true });
   }
 
+  handleHClick(e, title) {
+    e.preventDefault();
+    this.setState({ htitle: title });
+  }
+
+  setStartDate(date) {
+    this.setState({ startDate: date });
+  }
+  setEndDate(date) {
+    this.setState({ endDate: date });
+  }
+
   render() {
     const travel1 = this.state.card1;
     const travel2 = this.state.card2;
     const travel3 = this.state.card3;
+    const hlistItems = this.state.hotels.map((hl) => (
+      <li key={hl.id} onClick={(e) => this.handleHClick(e, hl.title)}>
+        {hl.title}
+      </li>
+    ));
+    const glistItems = this.state.guests.map((gl) => (
+      <li key={gl.id} onClick={(e) => this.handleHClick(e, gl.title)}>
+        {gl.title}
+      </li>
+    ));
 
     let c1, c2, c3;
     if (travel1 === true) {
@@ -129,21 +160,32 @@ class HomePage extends React.Component {
             <div className='bcontainer' ref={this.container}>
               <button
                 type='button'
-                class='button'
+                className='button'
                 onClick={this.handleButtonClick}
               >
-                ☰
+                {this.state.htitle}
               </button>
               {this.state.open && (
-                <div class='container'>
-                  <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
-                  </ul>
+                <div className='container'>
+                  <ul>{hlistItems}</ul>
                 </div>
               )}
+            </div>
+            <div className='calcontainer'>
+              <DatePicker
+                selected={this.state.startDate}
+                onChange={(date) => this.setStartDate(date)}
+                placeholderText='Check-in Date'
+                className='cal'
+              />
+            </div>
+            <div className='calcontainer'>
+              <DatePicker
+                selected={this.state.endDate}
+                onChange={(date) => this.setEndDate(date)}
+                placeholderText='Check-out Date'
+                className='cal'
+              />
             </div>
             <div className='container'>
               <div className='tc'>
