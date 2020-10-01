@@ -1,0 +1,50 @@
+.title {
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 100px;
+  color: black;
+  padding-bottom: 8rem;
+}
+.title::before,
+.title::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgb(182, 182, 69);
+}
+.title::before {
+  margin-right: 0.25em;
+}
+.title::after {
+  margin-left: 0.25em;
+}
+
+.test {
+  display: inline-block;
+  height: 300px;
+  width: 600px;
+}
+.ttxt {
+  column-count: 4;
+  column-gap: 40px;
+  column-rule: 1px solid rgb(182, 182, 69);
+}
+
+.apic {
+  padding-left: 200px;
+  padding-right: 60px;
+  display: inline-block;
+
+  height: 300px;
+  width: 500px;
+}
+
+.testtxt {
+  font-size: 45px;
+  padding-left: 150px;
+  padding-bottom: 25px;
+}
+.space {
+  padding-bottom: 25px;
+}
