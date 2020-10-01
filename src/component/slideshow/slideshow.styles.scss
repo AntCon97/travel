@@ -44,3 +44,34 @@
   z-index: -1;
   position: relative;
 }
+
+.txt1 {
+  font-size: 3rem;
+  color: whitesmoke;
+  width: 110%;
+}
+
+.bdiv {
+  display: inline-block;
+}
+
+.slideButton {
+  border: none;
+  background: rgb(182, 182, 69);
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+
+  transition: all 0.3s ease 0s;
+}
+
+.slideButton:hover {
+  color: #404040 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+
+  transition: all 0.3s ease 0s;
+}

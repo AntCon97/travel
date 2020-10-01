@@ -5,8 +5,8 @@ import './header.styles.scss';
 
 const Header = () => (
   <div className='header'>
-    <Link className='Logo' to='/'>
-      Travel Website
+    <Link className='head' to='/'>
+      <span className='heads'>Travel Website</span>
     </Link>
     <div className='options'>
       <Link className='option' to='/'>

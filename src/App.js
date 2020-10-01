@@ -6,6 +6,7 @@ import contact from './pages/contact/contact.jsx';
 import about from './pages/about/about.jsx';
 import HomePage from './pages/home/homepage.jsx';
 import Header from './component/header/header.jsx';
+import Footer from './component/footer/footer.component.jsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path='/contact' component={contact} />
           <Route exact path='/tours' component={tours} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

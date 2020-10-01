@@ -7,6 +7,7 @@ import pic2 from './../../assets/tours-01.jpg';
 import pic3 from './../../assets/london.jpg';
 
 class Cards extends React.Component {
+  container2 = React.createRef();
   container = React.createRef();
   constructor() {
     super();
@@ -65,6 +66,16 @@ class Cards extends React.Component {
         open: false,
       });
     }
+    if (
+      this.container2.current &&
+      !this.container2.current.contains(event.target)
+    ) {
+      this.setState({
+        card1: false,
+        card2: false,
+        card3: false,
+      });
+    }
   };
 
   handleButtonClick = () => {
@@ -112,7 +123,7 @@ class Cards extends React.Component {
     let c1, c2, c3;
     if (travel1 === true) {
       c1 = (
-        <div className='cc1'>
+        <div className='cc1' ref={this.container2}>
           <div className='back1'>
             <div className='upperCard'>
               <div className='ctitle c1'>Hotel Rental</div>
@@ -182,7 +193,7 @@ class Cards extends React.Component {
     }
     if (travel2 === true) {
       c2 = (
-        <div className='cc2'>
+        <div className='cc2' ref={this.container2}>
           <div className='back1'>
             <div className='upperCard'>
               <div className='ctitle c2'>Hotel Rental</div>
@@ -252,7 +263,7 @@ class Cards extends React.Component {
     }
     if (travel3 === true) {
       c3 = (
-        <div className='cc3'>
+        <div className='cc3' ref={this.container2}>
           <div className='back1'>
             <div className='upperCard'>
               <div className='ctitle c3'>Hotel Rental</div>
