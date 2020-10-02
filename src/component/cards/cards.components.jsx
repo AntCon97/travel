@@ -16,33 +16,7 @@ class Cards extends React.Component {
       card2: false,
       card3: false,
       open: false,
-      htitle: '-- Select Hotel --',
-      hotels: [
-        {
-          id: 0,
-          title: 'Shangri-La',
-          selected: false,
-          key: 'hotel',
-        },
-        {
-          id: 1,
-          title: 'Chatrium',
-          selected: false,
-          key: 'hotel',
-        },
-        {
-          id: 2,
-          title: 'Four Seasons',
-          selected: false,
-          key: 'hotel',
-        },
-        {
-          id: 3,
-          title: 'Hilton',
-          selected: false,
-          key: 'hotel',
-        },
-      ],
+
       startDate: '',
       endDate: '',
     };
@@ -98,11 +72,6 @@ class Cards extends React.Component {
     this.setState({ card1: false, card2: false, card3: true });
   }
 
-  handleHClick(e, title) {
-    e.preventDefault();
-    this.setState({ htitle: title });
-  }
-
   setStartDate(date) {
     this.setState({ startDate: date });
   }
@@ -114,11 +83,6 @@ class Cards extends React.Component {
     const travel1 = this.state.card1;
     const travel2 = this.state.card2;
     const travel3 = this.state.card3;
-    const hlistItems = this.state.hotels.map((hl) => (
-      <li key={hl.id} onClick={(e) => this.handleHClick(e, hl.title)}>
-        {hl.title}
-      </li>
-    ));
 
     let c1, c2, c3;
     if (travel1 === true) {
@@ -127,20 +91,16 @@ class Cards extends React.Component {
           <div className='back1'>
             <div className='upperCard'>
               <div className='ctitle c1'>Hotel Rental</div>
-              <div className='bcontainer' ref={this.container}>
-                <button
-                  type='button'
-                  className='button'
-                  onClick={this.handleButtonClick}
-                >
-                  {this.state.htitle}
-                </button>
-                {this.state.open && (
-                  <div className='container'>
-                    <ul>{hlistItems}</ul>
-                  </div>
-                )}
-              </div>
+
+              <select id='hotel' name='hotel' className='sdrop'>
+                <option value='default' className='options'>
+                  -- Select Hotel --
+                </option>
+                <option value='Shangri-La'>Shangri-La</option>
+                <option value='Chatrium'>Chatrium</option>
+                <option value='Four Seasons'>Four Seasons</option>
+                <option value='Hilton'>Hilton</option>
+              </select>
               <div className='calcontainer'>
                 <DatePicker
                   selected={this.state.startDate}
@@ -157,16 +117,16 @@ class Cards extends React.Component {
                   className='cal'
                 />
               </div>
-              <div className='formcontainer'>
-                <form className='form'>
-                  <input
-                    type='text'
-                    name='name'
-                    className='cform'
-                    placeholder='How many guests?'
-                  />
-                </form>
-              </div>
+              <select id='guests' name='guests' className='sdrops'>
+                <option value='default' className='options'>
+                  -- Guests --
+                </option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'> 3</option>
+                <option value='4'>4</option>
+                <option value='5+'>5+</option>
+              </select>
             </div>
             <div className='container1 c1'>
               <div className='tc'>
@@ -197,20 +157,17 @@ class Cards extends React.Component {
           <div className='back1'>
             <div className='upperCard'>
               <div className='ctitle c2'>Hotel Rental</div>
-              <div className='bcontainer' ref={this.container}>
-                <button
-                  type='button'
-                  className='button'
-                  onClick={this.handleButtonClick}
-                >
-                  {this.state.htitle}
-                </button>
-                {this.state.open && (
-                  <div className='container'>
-                    <ul>{hlistItems}</ul>
-                  </div>
-                )}
-              </div>
+
+              <select id='hotel' name='hotel' className='sdrop'>
+                <option value='default' className='options'>
+                  -- Select Hotel --
+                </option>
+                <option value='Shangri-La'>Shangri-La</option>
+                <option value='Chatrium'>Chatrium</option>
+                <option value='Four Seasons'>Four Seasons</option>
+                <option value='Hilton'>Hilton</option>
+              </select>
+
               <div className='calcontainer'>
                 <DatePicker
                   selected={this.state.startDate}
@@ -227,16 +184,16 @@ class Cards extends React.Component {
                   className='cal'
                 />
               </div>
-              <div className='formcontainer'>
-                <form className='form'>
-                  <input
-                    type='text'
-                    name='name'
-                    className='cform'
-                    placeholder='How many guests?'
-                  />
-                </form>
-              </div>
+              <select id='guests' name='guests' className='sdrops'>
+                <option value='default' className='options'>
+                  -- Guests --
+                </option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'> 3</option>
+                <option value='4'>4</option>
+                <option value='5+'>5+</option>
+              </select>
             </div>
             <div className='container1 c2'>
               <div className='tc'>
@@ -267,20 +224,15 @@ class Cards extends React.Component {
           <div className='back1'>
             <div className='upperCard'>
               <div className='ctitle c3'>Hotel Rental</div>
-              <div className='bcontainer' ref={this.container}>
-                <button
-                  type='button'
-                  className='button'
-                  onClick={this.handleButtonClick}
-                >
-                  {this.state.htitle}
-                </button>
-                {this.state.open && (
-                  <div className='container'>
-                    <ul>{hlistItems}</ul>
-                  </div>
-                )}
-              </div>
+              <select id='hotel' name='hotel' className='sdrop'>
+                <option value='default' className='options'>
+                  -- Select Hotel --
+                </option>
+                <option value='Shangri-La'>Shangri-La</option>
+                <option value='Chatrium'>Chatrium</option>
+                <option value='Four Seasons'>Four Seasons</option>
+                <option value='Hilton'>Hilton</option>
+              </select>
               <div className='calcontainer'>
                 <DatePicker
                   selected={this.state.startDate}
@@ -297,16 +249,16 @@ class Cards extends React.Component {
                   className='cal'
                 />
               </div>
-              <div className='formcontainer'>
-                <form className='form'>
-                  <input
-                    type='text'
-                    name='name'
-                    className='cform'
-                    placeholder='How many guests?'
-                  />
-                </form>
-              </div>
+              <select id='guests' name='guests' className='sdrops'>
+                <option value='default' className='options'>
+                  -- Guests --
+                </option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'> 3</option>
+                <option value='4'>4</option>
+                <option value='5+'>5+</option>
+              </select>
             </div>
             <div className='container1 c3'>
               <div className='tc'>

@@ -117,16 +117,6 @@
   padding-bottom: 10px;
 }
 
-.dropdown {
-  position: flex;
-  top: 100%;
-  left: 0;
-  width: 300px;
-  z-index: 3;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -143,18 +133,17 @@ li:hover {
 
 .calcontainer {
   padding-left: 25px;
-  padding-bottom: 35px;
 }
 
 .cal {
-  width: 293px;
+  width: 300px !important;
   padding-bottom: 10px;
   text-align: center;
   padding-top: 10px;
 }
 
 .cform {
-  width: 293px;
+  width: 5px;
   padding-bottom: 10px;
   text-align: center;
 }
@@ -165,12 +154,13 @@ li:hover {
 }
 
 .form {
+  width: 300px !important;
   padding-bottom: 35px;
 }
 
 .calcon1 {
   padding-left: 25px;
-  padding-bottom: 35px;
+  width: 300px;
 }
 
 .formcontainer {
@@ -201,4 +191,30 @@ li:hover {
   background: none;
 
   transition: all 0.3s ease 0s;
+}
+
+.sdrop {
+  padding-top: 25px;
+  margin-left: 35px;
+  width: 300px;
+  border: 0;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: 0;
+  padding-bottom: 10px;
+}
+
+.options {
+  text-align: center;
+}
+.sdrops {
+  margin-left: 35px;
+  width: 300px;
+  border: 0;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: 0;
+  padding-bottom: 25px;
 }
