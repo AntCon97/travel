@@ -1,0 +1,88 @@
+.tcontainer {
+  margin-top: 30rem;
+}
+
+.timport {
+  position: relative;
+}
+
+.ttitle {
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 100px;
+  color: black;
+  padding-bottom: 8rem;
+  background-color: white;
+}
+.ttitle::before,
+.ttitle::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgb(182, 182, 69);
+}
+.ttitle::before {
+  margin-right: 0.25em;
+}
+.ttitle::after {
+  margin-left: 0.25em;
+}
+
+.ttr1 {
+  margin-left: 17%;
+  width: 530px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 25px;
+}
+.ttr2 {
+  margin-left: 8%;
+  width: 530px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 25px;
+}
+
+.stxt {
+  font-size: 25px;
+}
+
+.ftxt {
+  padding-top: 10px;
+}
+
+.bc {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(2, 226, 255);
+  overflow: hidden;
+}
+
+.topt {
+  padding-left: 10px;
+  margin-right: 300px;
+}
+
+.bott {
+  background-color: rgb(32, 138, 187);
+  padding: 16px;
+}
+
+.tourpage {
+  background-color: whitesmoke;
+}
+
+.tstxt {
+  background-color: white;
+  padding: 5px;
+}
+
+.tr1 {
+  display: flex;
+}
+
+.tr2 {
+  display: flex;
+  padding-bottom: 15px;
+}
